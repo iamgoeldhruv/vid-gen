@@ -1,5 +1,6 @@
 import localFont from "next/font/local";
-import provider from "./provider";
+import Provider from './provider'
+
 import "./globals.css";
 import { ClerkProvider, SignInButton, SignedIn, SignedOut, UserButton } from '@clerk/nextjs'
 
@@ -26,9 +27,9 @@ export default function RootLayout({ children }) {
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-       <provider>
+      <Provider>
           {children}
-       </provider>
+       </Provider>
       </body>
     </html>
     </ClerkProvider>
